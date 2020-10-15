@@ -1,15 +1,16 @@
 import React , { Component } from 'react'
-import { Map as LeafletMap, TileLayer,  Marker, Popup } from 'react-leaflet';
+import { Map as LeafletMap, TileLayer,  Marker, Popup, GeoJSON } from 'react-leaflet';
 import './AgrabintaMap.css';
-import {markers} from './data';
+import { markers } from '../../data/markers';
+import { geojson } from '../../data/geojson';
 
 class Agrabinta extends Component {
   render() {
     return (
       <LeafletMap
         center={[-7.4035555, 106.971347]} // [-7.394266, 106.971347]
-        zoom={13} // 13
-        minZoom={13}
+        zoom={12} // 12
+        minZoom={12}
         maxZoom={18}
         attributionControl={true}
         zoomControl={true}
@@ -17,13 +18,19 @@ class Agrabinta extends Component {
         <TileLayer
           url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'
         />
-        {markers.map((marker) => (
-          <Marker position={marker.position}>
+
+        {markers.map((marker, i) => (
+          <Marker key={i} position={marker.position}>
             <Popup>
               {marker.name}
             </Popup>
           </Marker>
         ))}
+
+        {geojson.map((gj, i) => (
+         <GeoJSON key={i} data={gj} />
+        ))}
+
       </LeafletMap>
     );
   }
