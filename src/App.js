@@ -1,22 +1,21 @@
 import React from 'react';
 import AgrabintaMap from './components/AgrabintaMap/AgrabintaMap';
+import AppFooter from './components/AppFooter/AppFooter';
+import { AppHeader } from './components/AppHeader/AppHeader';
 
 function App() {
   return (
     <div className="App">
-      <header>
-        <nav className="h-4">
-          <div className="logo-wrapper">
-            <h1 className="text-gray-500">Agrabinta</h1>
-          </div>
-        </nav>
-      </header>
+      <AppHeader/>
       <main>
+        <section id="introduction">
+          
+        </section>
         <section id="agrabinta-map">
           <AgrabintaMap/>
         </section>
       </main>
-      <footer></footer>
+      <AppFooter/>
     </div>
   );
 }
