@@ -9,7 +9,7 @@ export const AppHeader = () => {
           </h1>
         </div>
         <div className="hidden sm:block">
-          <a className="text-gray-600 text-2xl" href="https://github.com/dendihandian/agrabinta" target="_blank" title="Agrabinta github repository">
+          <a className="text-gray-600 text-2xl" href="https://github.com/dendihandian/agrabinta" target="_blank" rel="noopener noreferrer" title="Agrabinta github repository">
             <i className="fab fa-github"></i>
           </a>
         </div>
