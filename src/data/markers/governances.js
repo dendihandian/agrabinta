@@ -9,6 +9,6 @@ export const governances = [
     },
     {
         name: "PTPN VIII Agrabinta",
-        position: [-7.4087739,106.9825339],
+        position: [-7.4078947,106.9915178],
     },
 ];

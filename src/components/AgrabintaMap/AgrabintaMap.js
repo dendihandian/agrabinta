@@ -8,7 +8,7 @@ class Agrabinta extends Component {
   render() {
     return (
       <LeafletMap
-        center={[-7.3734377,106.8842883]}
+        center={[-7.3651467,106.8949763]}
         zoom={12} // 12
         minZoom={12}
         maxZoom={18}
