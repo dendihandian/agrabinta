@@ -8,7 +8,7 @@ class Agrabinta extends Component {
   render() {
     return (
       <LeafletMap
-        center={[-7.4035555, 106.971347]} // [-7.394266, 106.971347]
+        center={[-7.3734377,106.8842883]}
         zoom={12} // 12
         minZoom={12}
         maxZoom={18}
@@ -28,7 +28,7 @@ class Agrabinta extends Component {
         ))}
 
         {geojson.map((gj, i) => (
-         <GeoJSON key={i} data={gj} />
+         <GeoJSON key={i} data={gj}/>
         ))}
 
       </LeafletMap>
