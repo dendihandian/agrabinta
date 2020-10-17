@@ -1,18 +1,31 @@
 import React from 'react';
+import {NavLink} from 'react-router-dom';
 
-export const AppHeader = () => {
+const AppHeader = (props) => {
     return (
-      <header className="h-16 px-5 flex items-center justify-center sm:justify-between bg-gray-800">
-        <div className="logo-wraper h-4 flex items-center">
+      <header className="h-16 flex items-center bg-gray-800">
+        <div className="w-1/2 h-16 flex items-center justify-start pl-4">
           <h1 className="text-2xl font-medium tracking-wider text-blue-500" title="Agrabinta">
             Agra<span className="text-blue-300">bin<span className="text-blue-200">ta</span></span>
           </h1>
         </div>
-        <div className="hidden sm:block">
-          <a className="text-gray-600 hover:text-blue-800 text-2xl" href="https://github.com/dendihandian/agrabinta" target="_blank" rel="noopener noreferrer" title="Agrabinta github repository">
+        <div className="w-1/2 h-16 flex items-center justify-end pr-4">
+          <nav className="mr-4">
+            <ul className="flex">
+              <li className="mx-2 text-gray-500 hover:text-gray-300">
+                <NavLink to="/">Map</NavLink>
+              </li>
+              <li className="mx-2 text-gray-500 hover:text-gray-300">
+                <NavLink to="/about">About</NavLink>
+              </li>
+            </ul>
+          </nav>
+          <a className="text-gray-600 hover:text-gray-300 text-2xl" href="https://github.com/dendihandian/agrabinta" target="_blank" rel="noopener noreferrer" title="Agrabinta github repository">
             <i className="fab fa-github"></i>
           </a>
         </div>
       </header>
     )
 }
+
+export default AppHeader;

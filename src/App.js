@@ -1,21 +1,18 @@
 import React from 'react';
-import AgrabintaMap from './components/AgrabintaMap/AgrabintaMap';
-import AppFooter from './components/AppFooter/AppFooter';
-import { AppHeader } from './components/AppHeader/AppHeader';
+import {Switch, Route} from 'react-router-dom';
+import AppLayout from './containers/AppLayout/AppLayout';
+import Map from './components/AppSection/Map';
+import About from './components/AppSection/About';
 
 function App() {
   return (
     <div className="App">
-      <AppHeader/>
-      <main>
-        <section id="introduction">
-          
-        </section>
-        <section id="agrabinta-map">
-          <AgrabintaMap/>
-        </section>
-      </main>
-      <AppFooter/>
+      <AppLayout>
+          <Switch>
+            <Route path="/about" component={About} />
+            <Route path="/" exact component={Map} />
+          </Switch>
+      </AppLayout>
     </div>
   );
 }

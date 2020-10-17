@@ -1,7 +1,5 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-body {
-  margin: 0;
+section {
+  height: calc(
+    100vh - 6rem
+  ); /* (viewport-height - (header-height + footer-height)) */
 }

@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import {BrowserRouter} from 'react-router-dom';
 
 // css styles
 // TODO: the css was working, but icons doesn't. find a way to fix broken icons.
@@ -10,10 +11,13 @@ import * as serviceWorker from './serviceWorker';
 // import 'leaflet/dist/images/marker-icon.png';
 // import 'leaflet/dist/images/marker-shadow.png';
 // import 'leaflet/dist/leaflet.css';
+import './styles/css/app.css';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );

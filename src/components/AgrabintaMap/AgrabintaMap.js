@@ -4,7 +4,7 @@ import './AgrabintaMap.css';
 import { markers } from '../../data/markers';
 import { geojson } from '../../data/geojson';
 
-class Agrabinta extends Component {
+class AgrabintaMap extends Component {
   render() {
     return (
       <LeafletMap
@@ -16,7 +16,10 @@ class Agrabinta extends Component {
         zoomControl={true}
       >
         <TileLayer
-          url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'
+          // url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'
+
+          attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
 
         {markers.map((marker, i) => (
@@ -36,4 +39,4 @@ class Agrabinta extends Component {
   }
 }
 
-export default Agrabinta;
+export default AgrabintaMap;
