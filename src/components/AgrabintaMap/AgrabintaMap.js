@@ -1,5 +1,5 @@
 import React , { Component } from 'react'
-import { Map as LeafletMap, TileLayer,  Marker, Popup, GeoJSON } from 'react-leaflet';
+import { Map as LeafletMap, TileLayer, Marker, Popup, GeoJSON } from 'react-leaflet';
 import './AgrabintaMap.css';
 import { markers } from '../../data/markers';
 import { geojson } from '../../data/geojson';
@@ -31,7 +31,8 @@ class AgrabintaMap extends Component {
         ))}
 
         {geojson.map((gj, i) => (
-         <GeoJSON key={i} data={gj}/>
+         <GeoJSON key={i} data={gj} stroke={true} style={{color: 'gray'}}/>
+        //  <Polygon key={i} positions={gj.features[0].geometry.coordinates} attribution="-" />
         ))}
 
       </LeafletMap>
