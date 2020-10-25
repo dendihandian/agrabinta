@@ -3,3 +3,7 @@ section {
     100vh - 6rem
   ); /* (viewport-height - (header-height + footer-height)) */
 }
+
+#section-example-inner {
+  height: calc(100vh - 10rem);
+}

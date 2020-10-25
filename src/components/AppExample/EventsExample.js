@@ -20,6 +20,7 @@ export default class EventsExample extends Component {
   }
 
   handleLocationFound = (e) => {
+    console.log(e)
     this.setState({
       hasLocation: true,
       latlng: e.latlng,

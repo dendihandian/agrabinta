@@ -8,6 +8,7 @@ import Map from './components/AppSection/Map';
 import About from './components/AppSection/About';
 import Contact from './components/AppSection/Contact';
 import Hero from './components/AppSection/Hero';
+import AppExample from './components/AppExample/AppExample';
 
 import enTrans from './lang/en';
 import idTrans from './lang/id';
@@ -36,6 +37,7 @@ function App() {
     <div className="App">
       <AppLayout>
           <Switch>
+            <Route path="/examples" component={AppExample} />
             <Route path="/about" component={About} />
             <Route path="/contact" component={Contact} />
             <Route path="/map" component={Map} />
