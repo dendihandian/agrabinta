@@ -9,6 +9,9 @@ import BeachIcon from '../LeafletIcons/BeachIcon';
 import SchoolIcon from '../LeafletIcons/SchoolIcon';
 import StoreIcon from '../LeafletIcons/StoreIcon';
 import PoliceStationIcon from '../LeafletIcons/PoliceStationIcon';
+import GovernmentBuildingIcon from '../LeafletIcons/GovernmentBuildingIcon';
+import FactoryIcon from '../LeafletIcons/FactoryIcon';
+
 
 const iconSwitch = (iconName) => {
     let icon = null;
@@ -31,6 +34,14 @@ const iconSwitch = (iconName) => {
 
         case 'police-station':
             icon = PoliceStationIcon;
+            break;
+
+        case 'government-building':
+            icon = GovernmentBuildingIcon;
+            break;
+
+        case 'factory':
+            icon = FactoryIcon;
             break;
 
         default:

@@ -7,9 +7,11 @@ export const governances = [
     {
         name: "Kantor Kecamatan Agrabinta",
         position: [-7.4177027,106.8974915],
+        icon: 'government-building',
     },
     {
         name: "PTPN VIII Agrabinta",
         position: [-7.4078947,106.9915178],
+        icon: 'factory',
     },
 ];
