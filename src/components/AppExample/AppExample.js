@@ -3,6 +3,7 @@ import { Link, Route, Switch } from 'react-router-dom';
 
 import SimpleExample from './SimpleExample';
 import EventsExample from './EventsExample';
+import ViewportExample from './ViewportExample';
 
 const AppExample = () => {
     return (
@@ -14,12 +15,16 @@ const AppExample = () => {
                 <div className="mr-2 bg-yellow-500 py-1 px-2 text-xs rounded">
                     <Link to="/examples/events">Events</Link>
                 </div>
+                <div className="mr-2 bg-yellow-500 py-1 px-2 text-xs rounded">
+                    <Link to="/examples/viewport">Viewport</Link>
+                </div>
             </nav>
 
             <div id="section-example-inner">
                 <Switch>
                     <Route path="/examples/simple" component={SimpleExample} />
                     <Route path="/examples/events" component={EventsExample} />
+                    <Route path="/examples/viewport" component={ViewportExample} />
                 </Switch>
             </div>
         </section>
