@@ -24,10 +24,10 @@ class AgrabintaMap extends Component {
   render() {
     return (
       <LeafletMap
-        // center={[-7.3651467,106.8949763]}
-        center={[-7.408292610286995, 106.98458433151247]}
-        // zoom={12} // 12
-        zoom={18} // 12
+        // center={[-7.408292610286995, 106.98458433151247]}
+        // zoom={18} // 12
+        center={[-7.3651467,106.8949763]}
+        zoom={12} // 12
         minZoom={12}
         maxZoom={18}
         attributionControl={true}
