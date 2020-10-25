@@ -1,12 +1,12 @@
 export const stores = [
     {
         name: "Toko Nusantara",
-        position: [-7.4085817,106.9852188],
+        position: [-7.408606468853168, 106.98536753654481],
         icon: 'store',
     },
     {
         name: "Toko Nusantara Putra",
-        position: [-7.4078007,106.9839948],
+        position: [-7.40761701566576, 106.98351144790651],
         icon: 'store',
     },
 ];

@@ -1,7 +1,7 @@
 export const schools = [
     {
         name: "SDN 1 Agrabinta",
-        position: [-7.4097727, 106.9846788],
+        position: [-7.409649116044276, 106.98502421379091],
         icon: 'school',
     },
     {

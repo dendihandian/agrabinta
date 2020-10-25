@@ -6,15 +6,33 @@ import MarkerList from './MarkerList';
 import GeoJSONList from './GeoJSONList';
 
 class AgrabintaMap extends Component {
+
+  // state = {
+  //   latlng: {
+  //     lat: -7.3651467,
+  //     lng: 106.8949763,
+  //   },
+  // }
+
+  handleClick = (e: Object) => {
+    // this.setState({
+    //   latlng: e.latlng,
+    // })
+    console.log(`[${e.latlng.lat}, ${e.latlng.lng}]`)
+  }
+  
   render() {
     return (
       <LeafletMap
-        center={[-7.3651467,106.8949763]}
-        zoom={12} // 12
+        // center={[-7.3651467,106.8949763]}
+        center={[-7.408292610286995, 106.98458433151247]}
+        // zoom={12} // 12
+        zoom={18} // 12
         minZoom={12}
         maxZoom={18}
         attributionControl={true}
         zoomControl={true}
+        onclick={this.handleClick}
       >
         <TileLayer
           // url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'
