@@ -1,8 +1,9 @@
 import React , { Component } from 'react'
-import { Map as LeafletMap, TileLayer, Marker, Popup, GeoJSON } from 'react-leaflet';
+import { Map as LeafletMap, TileLayer, GeoJSON } from 'react-leaflet';
 import './AgrabintaMap.css';
-import { markers } from '../../data/markers';
 import { geojson } from '../../data/geojson';
+
+import MarkerList from './MarkerList';
 
 class AgrabintaMap extends Component {
   render() {
@@ -18,17 +19,11 @@ class AgrabintaMap extends Component {
         <TileLayer
           // url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'
 
-          attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+          attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors | Markers Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
 
-        {markers.map((marker, i) => (
-          <Marker key={i} position={marker.position}>
-            <Popup>
-              {marker.name}
-            </Popup>
-          </Marker>
-        ))}
+        <MarkerList />
 
         {geojson.map((gj, i) => (
          <GeoJSON key={i} data={gj} stroke={true} style={{color: 'gray'}}/>

@@ -2,6 +2,7 @@ export const governances = [
     {
         name: "Polsek Agrabinta",
         position: [-7.408931, 106.985820],
+        icon: 'police-station',
     },
     {
         name: "Kantor Kecamatan Agrabinta",
