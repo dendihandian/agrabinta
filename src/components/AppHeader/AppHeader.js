@@ -16,17 +16,17 @@ const AppHeader = ({t, i18n, ...props}) => {
         </div>
         <div className="w-1/2 h-16 flex items-center justify-end pr-4">
           <nav className="hidden sm:block mr-4">
-            <ul className="flex">
-              <li className="mx-2 text-gray-500 hover:text-gray-300">
+            <ul className="flex items-center">
+              <li className="mx-2 text-gray-500 hover:text-gray-300 text-center">
                 <NavLink to="/">{t('home')}</NavLink>
               </li>
-              <li className="mx-2 text-gray-500 hover:text-gray-300">
+              <li className="mx-2 text-gray-500 hover:text-gray-300 text-center">
                 <NavLink to="/map">{t('map')}</NavLink>
               </li>
-              <li className="mx-2 text-gray-500 hover:text-gray-300">
+              <li className="mx-2 text-gray-500 hover:text-gray-300 text-center">
                 <NavLink to="/about">{t('about')}</NavLink>
               </li>
-              <li className="mx-2 text-gray-500 hover:text-gray-300">
+              <li className="mx-2 text-gray-500 hover:text-gray-300 text-center">
                 <NavLink to="/contact">{t('contact')}</NavLink>
               </li>
             </ul>
