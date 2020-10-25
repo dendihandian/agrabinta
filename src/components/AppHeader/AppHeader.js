@@ -15,7 +15,7 @@ const AppHeader = ({t, i18n, ...props}) => {
           </h1>
         </div>
         <div className="w-1/2 h-16 flex items-center justify-end pr-4">
-          <nav className="mr-4">
+          <nav className="hidden sm:block mr-4">
             <ul className="flex">
               <li className="mx-2 text-gray-500 hover:text-gray-300">
                 <NavLink to="/">{t('home')}</NavLink>
