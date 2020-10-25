@@ -10,7 +10,7 @@ const AppHeader = ({t, i18n, ...props}) => {
           <h1 className="text-2xl font-medium tracking-wider text-blue-500" title="Agrabinta">
             <NavLink to="/">
               Agra<span className="text-blue-300">bin<span className="text-blue-200">ta</span></span>
-
+              <sup className="bg-yellow-500 text-gray-900 rounded font-bold" style={{fontSize: "0.40rem", top: '-10px', padding: '2px'}}>BETA</sup>
             </NavLink>
           </h1>
         </div>
