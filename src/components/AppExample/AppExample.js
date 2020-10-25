@@ -4,11 +4,31 @@ import { Link, Route, Switch } from 'react-router-dom';
 import SimpleExample from './SimpleExample';
 import EventsExample from './EventsExample';
 import ViewportExample from './ViewportExample';
+import VectorLayersExample from './VectorLayersExample';
+import OtherLayersExample from './OtherLayersExample';
+import TooltipExample from './TooltipExample';
+import ZoomControlExample from './ZoomControlExample';
 
 const AppExample = () => {
+    // const examples = [
+    //     {
+    //         'path': '/examples/simple',
+    //         'label': 'Simple Map & Marker',
+    //         'component': <SimpleExample />,
+    //     }
+    // ];
+
     return (
         <section id="section-example">
             <nav className="flex justify-start p-2 bg-blue-800">
+                {/* {examples.map((example, i) => {
+                    return (
+                        <div key={i} className="mr-2 bg-yellow-500 py-1 px-2 text-xs rounded">
+                            <Link to={example.path}>{example.label}</Link>
+                        </div>
+                    )
+                })} */}
+
                 <div className="mr-2 bg-yellow-500 py-1 px-2 text-xs rounded">
                     <Link to="/examples/simple">Simple Map & Marker</Link>
                 </div>
@@ -18,13 +38,34 @@ const AppExample = () => {
                 <div className="mr-2 bg-yellow-500 py-1 px-2 text-xs rounded">
                     <Link to="/examples/viewport">Viewport</Link>
                 </div>
+                <div className="mr-2 bg-yellow-500 py-1 px-2 text-xs rounded">
+                    <Link to="/examples/vector-layers">Vector Layers</Link>
+                </div>
+                <div className="mr-2 bg-yellow-500 py-1 px-2 text-xs rounded">
+                    <Link to="/examples/other-layers">Other Layers</Link>
+                </div>
+                <div className="mr-2 bg-yellow-500 py-1 px-2 text-xs rounded">
+                    <Link to="/examples/tooltip">Tooltip</Link>
+                </div>
+                <div className="mr-2 bg-yellow-500 py-1 px-2 text-xs rounded">
+                    <Link to="/examples/zoom-control">Zoom Control</Link>
+                </div>
             </nav>
 
             <div id="section-example-inner">
                 <Switch>
+                    {/* {examples.map((example, i) => {
+                        return (
+                            <Route key={i} path="/examples/events" component={example.component} />
+                        )
+                    })} */}
                     <Route path="/examples/simple" component={SimpleExample} />
                     <Route path="/examples/events" component={EventsExample} />
                     <Route path="/examples/viewport" component={ViewportExample} />
+                    <Route path="/examples/vector-layers" component={VectorLayersExample} />
+                    <Route path="/examples/other-layers" component={OtherLayersExample} />
+                    <Route path="/examples/tooltip" component={TooltipExample} />
+                    <Route path="/examples/zoom-control" component={ZoomControlExample} />
                 </Switch>
             </div>
         </section>
