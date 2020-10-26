@@ -6,7 +6,7 @@ export const schools = [
     },
     {
         name: "SDN Salatri",
-        position: [-7.4138967,106.9248838],
+        position: [-7.4138037214144905, 106.92534506320955],
         icon: 'school',
     },
     {
