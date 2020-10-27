@@ -11,6 +11,10 @@ import StoreIcon from '../LeafletIcons/StoreIcon';
 import PoliceStationIcon from '../LeafletIcons/PoliceStationIcon';
 import GovernmentBuildingIcon from '../LeafletIcons/GovernmentBuildingIcon';
 import FactoryIcon from '../LeafletIcons/FactoryIcon';
+import SoccerFieldIcon from '../LeafletIcons/SoccerFieldIcon';
+import BankIcon from '../LeafletIcons/BankIcon';
+import KindergartenIcon from '../LeafletIcons/KindergartenIcon';
+import GasStationIcon from '../LeafletIcons/GasStationIcon';
 
 
 const iconSwitch = (iconName) => {
@@ -42,6 +46,22 @@ const iconSwitch = (iconName) => {
 
         case 'factory':
             icon = FactoryIcon;
+            break;
+
+        case 'soccer-field':
+            icon = SoccerFieldIcon;
+            break;
+
+        case 'kindergarten':
+            icon = KindergartenIcon;
+            break;
+
+        case 'bank':
+            icon = BankIcon;
+            break;
+
+        case 'gas-station':
+            icon = GasStationIcon;
             break;
 
         default:

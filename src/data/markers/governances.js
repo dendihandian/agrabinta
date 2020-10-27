@@ -10,8 +10,18 @@ export const governances = [
         icon: 'government-building',
     },
     {
+        name: "Kantor Kepala Desa Mekarsari",
+        position: [-7.41909666378784, 106.90396785736085],
+        icon: 'government-building',
+    },
+    {
         name: "PTPN VIII Agrabinta",
         position: [-7.40781384255209, 106.99205160140993],
         icon: 'factory',
+    },
+    {
+        name: "Bank BRI Cabang Agrabinta",
+        position: [-7.408239413897698, 106.98463797569276],
+        icon: 'bank',
     },
 ];

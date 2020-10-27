@@ -14,4 +14,9 @@ export const schools = [
         position: [-7.4052216, 106.896711],
         icon: 'school',
     },
+    {
+        name: "TK Tunas Karya",
+        position: [-7.408175578222062, 106.98933720588686],
+        icon: 'kindergarten',
+    },
 ];
