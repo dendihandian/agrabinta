@@ -8,18 +8,38 @@ import GeoJSONList from './GeoJSONList';
 class AgrabintaMap extends Component {
 
   state = {
-    center: [-7.3651467,106.8949763]
+    center: [-7.3651467,106.8949763],
+    currentLocation : []
   }
 
   handleClick = (e: Object) => {
     this.setState({
       center: [e.latlng.lat, e.latlng.lng],
+      // center: this.state.currentLocation
     })
     console.log(`[${e.latlng.lat}, ${e.latlng.lng}]`)
   }
   
+  setCurrentLocation = (lat, lng) => {
+      this.setState({
+        currentLocation: [lat, lng]
+      });
+  }
+  
   render() {
-    return (
+      if (navigator.geolocation) {
+
+        // const coo = navigator.geolocation.getCurrentPosition();
+
+        navigator.geolocation.getCurrentPosition((position) => {
+          this.setCurrentLocation(position.coords.latitude, position.coords.longitude)
+        });
+
+      } else {
+        console.log("Geolocation is not supported by this browser.");
+      }
+
+      return (
       <section className="relative">
         <div className="absolute inset-0">
           <LeafletMap
@@ -40,7 +60,9 @@ class AgrabintaMap extends Component {
               url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
 
-            <MarkerList />
+            <MarkerList 
+              currentLocation={this.state.currentLocation}
+            />
 
             <GeoJSONList />
 

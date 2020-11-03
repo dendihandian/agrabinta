@@ -71,7 +71,15 @@ const iconSwitch = (iconName) => {
     return icon;
 }
 
-const MarkerList = () => {
+const MarkerList = (props) => {
+
+    let currentLocationMarker = null;
+    if (props.currentLocation.length) {
+        currentLocationMarker = <Marker position={props.currentLocation}>
+            <Popup>You are here</Popup>
+        </Marker>;
+    }
+
     return (
         <Fragment>
             {markers.map((marker, i) => {
@@ -83,6 +91,9 @@ const MarkerList = () => {
                     </Marker>
                 )
             })}
+
+            {currentLocationMarker}
+
         </Fragment>
     )
 }
