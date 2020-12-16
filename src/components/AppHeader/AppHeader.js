@@ -1,6 +1,8 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
 import { withTranslation } from "react-i18next";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 
 const AppHeader = ({t, i18n, ...props}) => {
@@ -32,9 +34,9 @@ const AppHeader = ({t, i18n, ...props}) => {
             </ul>
           </nav>
           <a className="text-gray-600 hover:text-gray-300 text-2xl" href="https://github.com/dendihandian/agrabinta" target="_blank" rel="noopener noreferrer" title="Agrabinta github repository">
-            <i className="fab fa-github"></i>
+            <FontAwesomeIcon icon={faGithub} />
           </a>
-          {/* TODO: language selector using https://react.i18next.com/latest/withtranslation-hoc */}
+          {/* TODO: make language selector using https://react.i18next.com/latest/withtranslation-hoc */}
         </div>
       </header>
     )
