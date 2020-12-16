@@ -2,12 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-section {
+/* section {
   height: calc(
     100vh - 6rem
-  ); /* (viewport-height - (header-height + footer-height)) */
-}
+  );
+} */
 
-#section-example-inner {
+/* #section-example-inner {
   height: calc(100vh - 10rem);
-}
+} */

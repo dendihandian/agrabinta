@@ -12,6 +12,7 @@ import AppExample from './components/AppExample/AppExample';
 
 import enTrans from './lang/en';
 import idTrans from './lang/id';
+// import AgrabintaMapTest from './components/AgrabintaMapTest/AgrabintaMapTest';
 
 i18n
   .use(initReactI18next) // passes i18n down to react-i18next
@@ -34,7 +35,7 @@ i18n
 
 function App() {
   return (
-    <div className="App">
+    <div className="flex flex-col min-h-screen App">
       <AppLayout>
           <Switch>
             <Route path="/examples" component={AppExample} />
@@ -44,6 +45,7 @@ function App() {
             <Route path="/" exact component={Hero} />
           </Switch>
       </AppLayout>
+      {/* <AgrabintaMapTest/> */}
     </div>
   );
 }
