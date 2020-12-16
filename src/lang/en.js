@@ -1,4 +1,4 @@
-export default {
+const lang_en = {
     // Navigations
     "home": "Home",
     "map": "Map",
@@ -17,3 +17,5 @@ export default {
 
     // Contact
 }
+
+export default lang_en;

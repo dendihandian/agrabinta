@@ -1,4 +1,4 @@
-export default {
+const lang_id = {
     // Navigations
     "home": "Beranda",
     "map": "Peta",
@@ -17,3 +17,5 @@ export default {
 
     // Contact
 }
+
+export default lang_id;
