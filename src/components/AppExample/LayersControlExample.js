@@ -4,7 +4,7 @@ import {
   FeatureGroup,
   LayerGroup,
   LayersControl,
-  Map,
+  MapContainer as Map,
   Marker,
   Popup,
   Rectangle,

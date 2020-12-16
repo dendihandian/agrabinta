@@ -1,7 +1,7 @@
 // @flow
 
 import React, { Component } from 'react'
-import { Map, TileLayer } from 'react-leaflet'
+import { MapContainer as Map, TileLayer } from 'react-leaflet'
 
 type State = {
   animate: boolean,

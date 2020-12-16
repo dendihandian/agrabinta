@@ -1,5 +1,5 @@
 import React from 'react';
-import { Map, TileLayer, ZoomControl } from 'react-leaflet';
+import { MapContainer as Map, TileLayer, ZoomControl } from 'react-leaflet';
 
 const ZoomControlExample = () => (
   <Map center={[51.505, -0.09]} zoom={13} zoomControl={false}>

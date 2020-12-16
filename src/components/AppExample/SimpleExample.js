@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Map, TileLayer, Marker, Popup } from 'react-leaflet';
+import { MapContainer as Map, TileLayer, Marker, Popup } from 'react-leaflet';
 
 export default class SimpleExample extends Component {
   state = {

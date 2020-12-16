@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Map, Pane, Rectangle, TileLayer } from 'react-leaflet';
+import { MapContainer as Map, Pane, Rectangle, TileLayer } from 'react-leaflet';
 
 const outer = [
   [50.505, -29.09],

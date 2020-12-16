@@ -1,7 +1,7 @@
 // @flow
 
 import React, { Component } from 'react'
-import { Map, TileLayer, Rectangle } from 'react-leaflet'
+import { MapContainer as Map, TileLayer, Rectangle } from 'react-leaflet'
 
 const outer = [
   [50.505, -29.09],

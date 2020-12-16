@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {
   Circle,
   CircleMarker,
-  Map,
+  MapContainer as Map,
   Polygon,
   Polyline,
   Popup,

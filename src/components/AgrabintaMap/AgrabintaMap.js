@@ -1,5 +1,5 @@
 import React , { Component } from 'react'
-import { Map as LeafletMap, TileLayer } from 'react-leaflet';
+import { MapContainer as LeafletMap, TileLayer } from 'react-leaflet';
 import './AgrabintaMap.css';
 
 import MarkerList from './MarkerList';

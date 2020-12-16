@@ -1,7 +1,7 @@
 // @flow
 
 import React, { Component } from 'react'
-import { Map, TileLayer, VideoOverlay } from 'react-leaflet'
+import { MapContainer as Map, TileLayer, VideoOverlay } from 'react-leaflet'
 
 export default class VideoOverlayExample extends Component<
   {},

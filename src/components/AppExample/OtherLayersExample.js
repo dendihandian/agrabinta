@@ -3,7 +3,7 @@ import {
   Circle,
   FeatureGroup,
   LayerGroup,
-  Map,
+  MapContainer as Map,
   Popup,
   Rectangle,
   TileLayer,

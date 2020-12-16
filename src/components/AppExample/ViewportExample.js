@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Map, TileLayer } from 'react-leaflet';
+import { MapContainer as Map, TileLayer } from 'react-leaflet';
 
 const DEFAULT_VIEWPORT = {
   center: [51.505, -0.09],
