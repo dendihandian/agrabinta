@@ -1,28 +1,38 @@
 import React , { Component } from 'react'
-import { MapContainer as LeafletMap, TileLayer } from 'react-leaflet';
+import { MapContainer, TileLayer } from 'react-leaflet';
 import './AgrabintaMap.css';
 
 import MarkerList from './MarkerList';
 import GeoJSONList from './GeoJSONList';
 
+const agrabintaLocation = [-7.3651467,106.8949763];
+
 class AgrabintaMap extends Component {
 
   state = {
-    center: [-7.3651467,106.8949763],
-    currentLocation : []
+    center: agrabintaLocation,
+    yourLocation : []
   }
 
-  handleClick = (e: Object) => {
+  setCenter = (latlngArray) => {
+    // alert(latlngArray);
+    this.setState({
+      center: latlngArray
+    });
+  }
+
+  handleClick = (e) => {
+    alert(432884230)
     this.setState({
       center: [e.latlng.lat, e.latlng.lng],
-      // center: this.state.currentLocation
+      // center: this.state.yourLocation
     })
     console.log(`[${e.latlng.lat}, ${e.latlng.lng}]`)
   }
   
-  setCurrentLocation = (lat, lng) => {
+  setYourLocation = (lat, lng) => {
       this.setState({
-        currentLocation: [lat, lng]
+        yourLocation: [lat, lng]
       });
   }
   
@@ -32,7 +42,7 @@ class AgrabintaMap extends Component {
         // const coo = navigator.geolocation.getCurrentPosition();
 
         navigator.geolocation.getCurrentPosition((position) => {
-          this.setCurrentLocation(position.coords.latitude, position.coords.longitude)
+          this.setYourLocation(position.coords.latitude, position.coords.longitude)
         });
 
       } else {
@@ -41,8 +51,12 @@ class AgrabintaMap extends Component {
 
       return (
       <section className="relative">
-        <div className="absolute inset-0">
-          <LeafletMap
+        <div className="absolute bottom-0 right-0 mb-5 mr-3" style={{zIndex: 1001}}>
+          <button onClick={() => this.setCenter(agrabintaLocation)} className="p-2 mr-2 text-sm text-white bg-indigo-500 rounded hover:bg-indigo-600 focus:outline-none">Go to your location</button>
+          <button onClick={() => this.setCenter(agrabintaLocation)} className="p-2 text-sm text-white bg-blue-500 rounded hover:bg-blue-600 focus:outline-none">Go to Agrabinta</button>
+        </div>
+        <div className="relative">
+          <MapContainer
             // center={[-7.408292610286995, 106.98458433151247]}
             // zoom={18} // 12
             center={this.state.center}
@@ -61,12 +75,12 @@ class AgrabintaMap extends Component {
             />
 
             <MarkerList 
-              currentLocation={this.state.currentLocation}
+              currentLocation={this.state.yourLocation}
             />
 
             <GeoJSONList />
 
-          </LeafletMap>
+          </MapContainer>
         </div>
       </section>
     );
