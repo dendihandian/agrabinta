@@ -51,7 +51,7 @@ class AgrabintaMap extends Component {
 
       return (
       <section className="relative">
-        <div className="absolute bottom-0 right-0 mb-5 mr-3" style={{zIndex: 1001}}>
+        <div className="absolute bottom-0 right-0 mb-6 mr-3" style={{zIndex: 1001}}>
           <button onClick={() => this.setCenter(agrabintaLocation)} className="p-2 mr-2 text-sm text-white bg-indigo-500 rounded hover:bg-indigo-600 focus:outline-none">Go to your location</button>
           <button onClick={() => this.setCenter(agrabintaLocation)} className="p-2 text-sm text-white bg-blue-500 rounded hover:bg-blue-600 focus:outline-none">Go to Agrabinta</button>
         </div>
